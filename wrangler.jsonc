@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "rill",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-06-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "rules": [{ "type": "Text", "globs": ["**/*.sql"] }],
+  "d1_databases": [{ "binding": "DB", "database_name": "rill", "migrations_dir": "migrations","database_id": "760d6c87-81d3-42d4-bf39-a314982f1fa3" }],
+  "triggers": { "crons": ["* * * * *"] },
+  "observability": { "enabled": true },
+  "vars": {}
+}
